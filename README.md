@@ -2,6 +2,18 @@
 
 These are the progams from CMPSC360 at Penn State University.
 
+## Library Headers
+
+```C++
+#include <iostream>
+#include <vector>
+#include <ctime>
+#include <algorithm>
+#include <chrono>
+#include <thread>
+using namespace std;
+```
+
 ## Matrix operations
 
 Here is a sample function to find the transpose from the matrix_op.cpp program:
