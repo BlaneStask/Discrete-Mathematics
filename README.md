@@ -1,6 +1,6 @@
 # Discrete Mathematics and its Applications
 
-These are the progams from CMPSC360 at Penn State University.
+These are the progams from CMPSC360 at Penn State University. In this course we worked on the study of logics, data structures and the analysis of algorithms.
 
 ## Library Headers
 
