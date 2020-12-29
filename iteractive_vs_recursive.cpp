@@ -49,12 +49,9 @@ int RecurElement(int n){
 int main(){
     cout << IterPower(2.0, 5) << endl;
     cout << RecurPower(2.0, 5) << endl;
-    
     cout << IterMult(2.0, 5) << endl;
     cout << RecurMult(2.0, 5) << endl;
-    
     cout << IterElement(4) << endl;
     cout << RecurElement(4) << endl;
-    
     return 0;
 }
