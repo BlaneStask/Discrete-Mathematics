@@ -6,68 +6,67 @@
 #include <vector>
 using namespace std;
 
-bool isMember(int x, vector<int> A) {
+bool isMember(int x, vector<int> A){
     // return TRUE if x is found in A,
     // return FALSE otherwise
-    for (int e : A)
-        if (x == e) return true;
+    for(int e : A)
+        if(x == e) return true;
     return false;
 }
 
-bool isSubset(vector<int> A, vector<int> B) {
+bool isSubset(vector<int> A, vector<int> B){
     // return FALSE if there's an element in A that is NOT in B.
     // return TRUE otherwise
-    for (int e : A)
-        if (!isMember(e, B)) return false;
+    for(int e : A)
+        if(!isMember(e, B)) return false;
     return true;
 }
 
-bool isEqual(vector<int> A, vector<int> B) {
+bool isEqual(vector<int> A, vector<int> B){
     return (isSubset(A, B) && isSubset(B, A));
 }
 
-vector<int> myUnion(vector<int> A, vector<int> B) {
+vector<int> myUnion(vector<int> A, vector<int> B){
     vector<int> C = A;
-    for (int e : B)
-        if (!isMember(e, A)) C.push_back(e);
+    for(int e : B)
+        if(!isMember(e, A)) C.push_back(e);
     return C;
 }
 
-vector<int> myIntersect(vector<int> A, vector<int> B) {
+vector<int> myIntersect(vector<int> A, vector<int> B){
     vector<int> C;
-    for (int e : A)
-        if (isMember(e, B)) C.push_back(e);
+    for(int e : A)
+        if(isMember(e, B)) C.push_back(e);
     return C;
 }
 
-vector<int> myDiff(vector<int> A, vector<int> B) {
+vector<int> myDiff(vector<int> A, vector<int> B){
     vector<int> C;
-    for (int e : A)
-        if (!isMember(e, B)) C.push_back(e);
+    for(int e : A)
+        if(!isMember(e, B)) C.push_back(e);
     return C;
 }
 
-vector<int> mySymDiff(vector<int> A, vector<int> B) {
+vector<int> mySymDiff(vector<int> A, vector<int> B){
     vector<int> C;
-    for (int e : A)
-        if (!isMember(e, B)) C.push_back(e);
-    for (int e : B)
-        if (!isMember(e, A)) C.push_back(e);
+    for(int e : A)
+        if(!isMember(e, B)) C.push_back(e);
+    for(int e : B)
+        if(!isMember(e, A)) C.push_back(e);
     return C;
 }
 
-void printSet(vector<int> A) {
-    if (A.size() == 0) cout << "Empty";
-    else {
-        for (int e : A) cout << e << " ";
+void printSet(vector<int> A){
+    if(A.size() == 0) cout << "Empty";
+    else{
+        for(int e : A) cout << e << " ";
     }
     cout << endl;
 }
 
-int main()
-{
-    vector<int> A = { 1, 2, 3 };
-    vector<int> B = { 2, 3, 4, 5 };
+int main(){
+    vector<int> A = { 1, 2, 3};
+    vector<int> B = { 2, 3, 4, 5};
     vector<int> N = {};
     printSet(A);
     printSet(B);
